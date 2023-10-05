@@ -1,4 +1,4 @@
-init_seed=0
+init_seed=1011
 for reward in "aim" "none"; do
     for outer in {1..5}; do
         for inner in {1..5}; do
