@@ -524,7 +524,7 @@ class GAIL:
 
 
 if __name__ == "__main__":
-    wandb.init(project="aim", config=vars(args), name=args.reward)
+    wandb.init(project="aim", config=vars(args), name=f"{args.reward}_{args.seed}")
 
     gail = GAIL()
     gail.gather_data(num_trans=500)
