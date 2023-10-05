@@ -224,10 +224,10 @@ class GAIL:
         next_states = next_states.reshape([-1, self.env.dims])
         v = self.policy(states)[0]
         v_prime = self.policy(next_states)[-1]
-        if rewards is not None:
-            dones = rewards.type(torch.float32).reshape([-1, 1])
-        else:
-            dones = dones.type(torch.float32).reshape([-1, 1])
+        # if rewards is not None:
+        #     dones = rewards.type(torch.float32).reshape([-1, 1])
+        # else:
+        dones = dones.type(torch.float32).reshape([-1, 1])
         reward_func = reward_dict[reward_to_use]
         if reward_func is not None:
             # d0 = self.discriminator(states)
