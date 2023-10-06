@@ -1,0 +1,19 @@
+name: rl
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.10
+  - scipy
+  - pip
+  - tensorboardX
+  - ipykernel
+  - tqdm
+  - pip:
+    - torch-tb-profiler
+    - gym==0.17.2
+    - stable-baselines3[extra]>=0.10.0
+    - seaborn
+    - hydra-core
+    - wandb
+    - shimmy>=0.2.1

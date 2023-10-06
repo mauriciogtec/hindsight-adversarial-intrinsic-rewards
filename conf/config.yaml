@@ -1,0 +1,19 @@
+defaults:
+  - _self_
+  - algo: ppo
+
+seed: 12345
+num_envs: 32
+parallel: false
+training_timesteps: 1_000_000
+
+eval:
+  penalty: 0.0
+  freq: 1000
+  episodes: 10
+
+algo_name: ${hydra:runtime.choices.algo}
+
+hydra:
+  run:
+    dir: logs/train/${algo_name}/${seed}
